@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" media="all" href="assets/css/app.css" />
+</head>
+<body class="ui_indigo ">
+	<header class="navbar navbar-gitlab navbar-gitlab-new qa-navbar">
+		<div class="container-fluid">
+			<div class="header-content">
+				<div class="title-container">
+					<h1 class="title">
+						<a title="Dashboard" id="logo" href="/"><svg width="24" height="24" class="tanuki-logo" viewBox="0 0 36 36">
+						  <path class="tanuki-shape tanuki-left-ear" fill="#e24329" d="M2 14l9.38 9v-9l-4-12.28c-.205-.632-1.176-.632-1.38 0z"></path>
+						  <path class="tanuki-shape tanuki-right-ear" fill="#e24329" d="M34 14l-9.38 9v-9l4-12.28c.205-.632 1.176-.632 1.38 0z"></path>
+						  <path class="tanuki-shape tanuki-nose" fill="#e24329" d="M18,34.38 3,14 33,14 Z"></path>
+						  <path class="tanuki-shape tanuki-left-eye" fill="#fc6d26" d="M18,34.38 11.38,14 2,14 6,25Z"></path>
+						  <path class="tanuki-shape tanuki-right-eye" fill="#fc6d26" d="M18,34.38 24.62,14 34,14 30,25Z"></path>
+						  <path class="tanuki-shape tanuki-left-cheek" fill="#fca326" d="M2 14L.1 20.16c-.18.565 0 1.2.5 1.56l17.42 12.66z"></path>
+						  <path class="tanuki-shape tanuki-right-cheek" fill="#fca326" d="M34 14l1.9 6.16c.18.565 0 1.2-.5 1.56L18 34.38z"></path>
+						</svg>
+
+						<span class="logo-text hidden-xs">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 617 169"><path d="M315.26 2.97h-21.8l.1 162.5h88.3v-20.1h-66.5l-.1-142.4M465.89 136.95c-5.5 5.7-14.6 11.4-27 11.4-16.6 0-23.3-8.2-23.3-18.9 0-16.1 11.2-23.8 35-23.8 4.5 0 11.7.5 15.4 1.2v30.1h-.1m-22.6-98.5c-17.6 0-33.8 6.2-46.4 16.7l7.7 13.4c8.9-5.2 19.8-10.4 35.5-10.4 17.9 0 25.8 9.2 25.8 24.6v7.9c-3.5-.7-10.7-1.2-15.1-1.2-38.2 0-57.6 13.4-57.6 41.4 0 25.1 15.4 37.7 38.7 37.7 15.7 0 30.8-7.2 36-18.9l4 15.9h15.4v-83.2c-.1-26.3-11.5-43.9-44-43.9M557.63 149.1c-8.2 0-15.4-1-20.8-3.5V70.5c7.4-6.2 16.6-10.7 28.3-10.7 21.1 0 29.2 14.9 29.2 39 0 34.2-13.1 50.3-36.7 50.3m9.2-110.6c-19.5 0-30 13.3-30 13.3v-21l-.1-27.8h-21.3l.1 158.5c10.7 4.5 25.3 6.9 41.2 6.9 40.7 0 60.3-26 60.3-70.9-.1-35.5-18.2-59-50.2-59M77.9 20.6c19.3 0 31.8 6.4 39.9 12.9l9.4-16.3C114.5 6 97.3 0 78.9 0 32.5 0 0 28.3 0 85.4c0 59.8 35.1 83.1 75.2 83.1 20.1 0 37.2-4.7 48.4-9.4l-.5-63.9V75.1H63.6v20.1h38l.5 48.5c-5 2.5-13.6 4.5-25.3 4.5-32.2 0-53.8-20.3-53.8-63-.1-43.5 22.2-64.6 54.9-64.6M231.43 2.95h-21.3l.1 27.3v94.3c0 26.3 11.4 43.9 43.9 43.9 4.5 0 8.9-.4 13.1-1.2v-19.1c-3.1.5-6.4.7-9.9.7-17.9 0-25.8-9.2-25.8-24.6v-65h35.7v-17.8h-35.7l-.1-38.5M155.96 165.47h21.3v-124h-21.3v124M155.96 24.37h21.3V3.07h-21.3v21.3"></path></svg>
+
+						</span>
+						</a></h1>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="layout-page">
+		<div class="content-wrapper">
+			<div class="alert-wrapper">
+			   <nav class="breadcrumbs container-fluid container-limited" role="navigation">
+			      <div class="breadcrumbs-container">
+			         <div class="breadcrumbs-links js-title-container">
+			            <ul class="list-unstyled breadcrumbs-list js-breadcrumbs-list">
+			               <li>
+			                  <h2 class="breadcrumbs-sub-title"><a href="/explore/projects/trending">Projects</a></h2>
+			               </li>
+			            </ul>
+			         </div>
+			      </div>
+			   </nav>
+			   <div class="flash-container flash-container-page"></div>
+			</div>
+			<div class="container-fluid container-limited ">
+				<div class="content" id="content-body">
+					<div class="explore-title text-center">
+					   <h2>
+					      Explore GitLab
+					   </h2>
+					   <p class="lead">
+					      Discover projects, groups and snippets. Share your projects with others
+					   </p>
+					   <br>
+					</div>
+					<div class="top-area">
+					   <ul class="nav-links">
+					      <li class="active"><a href="/explore/projects/trending">Trending
+					         </a>
+					      </li>
+					      <li class=""><a href="/explore/projects/starred">Most stars
+					         </a>
+					      </li>
+					      <li class=""><a href="/explore/projects">All
+					         </a>
+					      </li>
+					   </ul>
+					   <div class="nav-controls">
+					      <form class="project-filter-form" id="project-filter-form" action="/explore/projects/trending?" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓"><input type="search" name="name" id="project-filter-form-field" placeholder="Filter by name..." class="project-filter-form-field form-control input-short js-projects-list-filter" spellcheck="false" tabindex="2"></form>
+					      <div class="dropdown js-project-filter-dropdown-wrap">
+					         <button class="dropdown-menu-toggle " id="sort-projects-dropdown" type="button" data-toggle="dropdown" aria-expanded="false"><span class="dropdown-toggle-text ">Last updated</span><i aria-hidden="true" data-hidden="true" class="fa fa-chevron-down"></i></button>
+					         <ul class="dropdown-menu dropdown-menu-align-right dropdown-menu-selectable">
+					            <li class="dropdown-header">
+					               Sort by
+					            </li>
+					            <li>
+					               <a class="is-active" href="/explore/projects/trending?sort=latest_activity_desc">Last updated
+					               </a>
+					            </li>
+					            <li>
+					               <a href="/explore/projects/trending?sort=name_asc">Name
+					               </a>
+					            </li>
+					            <li>
+					               <a href="/explore/projects/trending?sort=latest_activity_asc">Oldest updated
+					               </a>
+					            </li>
+					            <li>
+					               <a href="/explore/projects/trending?sort=created_asc">Oldest created
+					               </a>
+					            </li>
+					            <li>
+					               <a href="/explore/projects/trending?sort=created_desc">Last created
+					               </a>
+					            </li>
+					            <li class="divider"></li>
+					            <li>
+					               <a class="is-active" href="/explore/projects/trending?sort=latest_activity_desc">Hide archived projects
+					               </a>
+					            </li>
+					            <li>
+					               <a href="/explore/projects/trending?archived=true&amp;sort=latest_activity_desc">Show archived projects
+					               </a>
+					            </li>
+					            <li>
+					               <a href="/explore/projects/trending?archived=only&amp;sort=latest_activity_desc">Show archived projects only
+					               </a>
+					            </li>
+					         </ul>
+					      </div>
+					   </div>
+					</div>
+					<div class="js-projects-list-holder">
+					   <ul class="projects-list">
+					      <li class="no-description project-row">
+					         <div class="avatar-container s40">
+					            <a class="project" href="/freedesktop-sdk/freedesktop-sdk">
+					               <div class="avatar project-avatar s40 identicon" style="background-color: #FBE9E7; color: #555">F</div>
+					            </a>
+					         </div>
+					         <div class="project-details">
+					            <h3 class="prepend-top-0 append-bottom-0">
+					               <a class="text-plain" href="/freedesktop-sdk/freedesktop-sdk"><span class="project-full-name"><span class="namespace-name">
+					               freedesktop-sdk
+					               /
+					               </span>
+					               <span class="project-name">freedesktop-sdk</span></span></a>
+					            </h3>
+					         </div>
+					         <div class="controls">
+					            <div class="prepend-top-0">
+					               <span class="prepend-left-10">
+					                  <a class="ci-status-link ci-status-icon-failed " title="" data-toggle="tooltip" data-placement="auto left" data-container="body" href="/freedesktop-sdk/freedesktop-sdk/commit/5d6a1669f4e108b6a56d40bbcd650b77236960ca/pipelines" data-original-title="Commit: failed">
+					                     <svg class="s16">
+					                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://gitlab.com/assets/icons-7e80446544970c6b607eda58e7c7f88b0aa23a4cf71caa7f96d163ece8cb8db4.svg#status_failed"></use>
+					                     </svg>
+					                  </a>
+					               </span>
+					               <span class="prepend-left-10">
+					               <i aria-hidden="true" data-hidden="true" class="fa fa-star"></i>
+					               2
+					               </span>
+					               <span class="prepend-left-10 visibility-icon has-tooltip" data-container="body" data-placement="left" title="" data-original-title="Public - The project can be accessed without any authentication.">
+					               <i aria-hidden="true" data-hidden="true" class="fa fa-globe fa-fw"></i>
+					               </span>
+					            </div>
+					            <div class="prepend-top-0">
+					               updated <time class="js-timeago js-timeago-render" title="" datetime="2018-02-22T17:57:17Z" data-toggle="tooltip" data-placement="top" data-container="body" data-original-title="Feb 22, 2018 5:57pm" data-tid="16">about 13 hours ago</time>
+					            </div>
+					         </div>
+					      </li>
+					      <li class="project-row">
+					         <div class="avatar-container s40">
+					            <a class="project" href="/cerfacs/batman"><img alt="" class="avatar project-avatar s40 js-lazy-loaded" src="https://assets.gitlab-static.net/uploads/-/system/project/avatar/4319147/BatmanLogo_Light.png">
+					            </a>
+					         </div>
+					         <div class="project-details">
+					            <h3 class="prepend-top-0 append-bottom-0">
+					               <a class="text-plain" href="/cerfacs/batman"><span class="project-full-name"><span class="namespace-name">
+					               CERFACS
+					               /
+					               </span>
+					               <span class="project-name">batman</span></span></a>
+					            </h3>
+					            <div class="description prepend-top-5">
+					               <p dir="auto">Statistical analysis for expensive computer codes made easy.</p>
+					            </div>
+					         </div>
+					         <div class="controls">
+					            <div class="prepend-top-0">
+					               <span class="prepend-left-10">
+					                  <a class="ci-status-link ci-status-icon-success " title="" data-toggle="tooltip" data-placement="auto left" data-container="body" href="/cerfacs/batman/commit/03fa5d71aa2ff16f9309b37cc166487b203b5b35/pipelines" data-original-title="Commit: passed">
+					                     <svg class="s16">
+					                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://gitlab.com/assets/icons-7e80446544970c6b607eda58e7c7f88b0aa23a4cf71caa7f96d163ece8cb8db4.svg#status_success"></use>
+					                     </svg>
+					                  </a>
+					               </span>
+					               <span class="prepend-left-10">
+					               <i aria-hidden="true" data-hidden="true" class="fa fa-star"></i>
+					               5
+					               </span>
+					               <span class="prepend-left-10 visibility-icon has-tooltip" data-container="body" data-placement="left" title="" data-original-title="Public - The project can be accessed without any authentication.">
+					               <i aria-hidden="true" data-hidden="true" class="fa fa-globe fa-fw"></i>
+					               </span>
+					            </div>
+					            <div class="prepend-top-0">
+					               updated <time class="js-timeago js-timeago-render" title="" datetime="2018-02-17T13:36:51Z" data-toggle="tooltip" data-placement="top" data-container="body" data-original-title="Feb 17, 2018 1:36pm" data-tid="17">5 days ago</time>
+					            </div>
+					         </div>
+					      </li>
+					      <li class="no-description project-row">
+					         <div class="avatar-container s40">
+					            <a class="project" href="/empurrandojuntos/frontend">
+					               <div class="avatar project-avatar s40 identicon" style="background-color: #EEEEEE; color: #555">F</div>
+					            </a>
+					         </div>
+					         <div class="project-details">
+					            <h3 class="prepend-top-0 append-bottom-0">
+					               <a class="text-plain" href="/empurrandojuntos/frontend"><span class="project-full-name"><span class="namespace-name">
+					               Empurrando Juntos
+					               /
+					               </span>
+					               <span class="project-name">frontend</span></span></a>
+					            </h3>
+					         </div>
+					         <div class="controls">
+					            <div class="prepend-top-0">
+					               <span class="prepend-left-10">
+					                  <a class="ci-status-link ci-status-icon-success " title="Commit: passed" data-toggle="tooltip" data-placement="auto left" data-container="body" href="/empurrandojuntos/frontend/commit/5b698920c04ab06de596b0ed18d2093e21954e97/pipelines">
+					                     <svg class="s16">
+					                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://gitlab.com/assets/icons-7e80446544970c6b607eda58e7c7f88b0aa23a4cf71caa7f96d163ece8cb8db4.svg#status_success"></use>
+					                     </svg>
+					                  </a>
+					               </span>
+					               <span class="prepend-left-10">
+					               <i aria-hidden="true" data-hidden="true" class="fa fa-star"></i>
+					               4
+					               </span>
+					               <span class="prepend-left-10 visibility-icon has-tooltip" data-container="body" data-placement="left" title="" data-original-title="Public - The project can be accessed without any authentication.">
+					               <i aria-hidden="true" data-hidden="true" class="fa fa-globe fa-fw"></i>
+					               </span>
+					            </div>
+					            <div class="prepend-top-0">
+					               updated <time class="js-timeago js-timeago-render" title="" datetime="2018-02-22T05:09:56Z" data-toggle="tooltip" data-placement="top" data-container="body" data-original-title="Feb 22, 2018 5:09am" data-tid="18">a day ago</time>
+					            </div>
+					         </div>
+					      </li>
+					      <li class="no-description project-row">
+					         <div class="avatar-container s40">
+					            <a class="project" href="/eyeo/web.eyeo.com">
+					               <div class="avatar project-avatar s40 identicon" style="background-color: #E3F2FD; color: #555">W</div>
+					            </a>
+					         </div>
+					         <div class="project-details">
+					            <h3 class="prepend-top-0 append-bottom-0">
+					               <a class="text-plain" href="/eyeo/web.eyeo.com"><span class="project-full-name"><span class="namespace-name">
+					               eyeo
+					               /
+					               </span>
+					               <span class="project-name">web.eyeo.com</span></span></a>
+					            </h3>
+					         </div>
+					         <div class="controls">
+					            <div class="prepend-top-0">
+					               <span class="prepend-left-10">
+					               <i aria-hidden="true" data-hidden="true" class="fa fa-star"></i>
+					               0
+					               </span>
+					               <span class="prepend-left-10 visibility-icon has-tooltip" data-container="body" data-placement="left" title="" data-original-title="Public - The project can be accessed without any authentication.">
+					               <i aria-hidden="true" data-hidden="true" class="fa fa-globe fa-fw"></i>
+					               </span>
+					            </div>
+					            <div class="prepend-top-0">
+					               updated <time class="js-timeago js-timeago-render" title="" datetime="2018-02-19T15:30:00Z" data-toggle="tooltip" data-placement="top" data-container="body" data-original-title="Feb 19, 2018 3:30pm" data-tid="19">3 days ago</time>
+					            </div>
+					         </div>
+					      </li>
+					      <li class="no-description project-row">
+					         <div class="avatar-container s40">
+					            <a class="project" href="/eyeo/web.adblockplus.org">
+					               <div class="avatar project-avatar s40 identicon" style="background-color: #F3E5F5; color: #555">W</div>
+					            </a>
+					         </div>
+					         <div class="project-details">
+					            <h3 class="prepend-top-0 append-bottom-0">
+					               <a class="text-plain" href="/eyeo/web.adblockplus.org"><span class="project-full-name"><span class="namespace-name">
+					               eyeo
+					               /
+					               </span>
+					               <span class="project-name">web.adblockplus.org</span></span></a>
+					            </h3>
+					         </div>
+					         <div class="controls">
+					            <div class="prepend-top-0">
+					               <span class="prepend-left-10">
+					               <i aria-hidden="true" data-hidden="true" class="fa fa-star"></i>
+					               0
+					               </span>
+					               <span class="prepend-left-10 visibility-icon has-tooltip" data-container="body" data-placement="left" title="" data-original-title="Public - The project can be accessed without any authentication.">
+					               <i aria-hidden="true" data-hidden="true" class="fa fa-globe fa-fw"></i>
+					               </span>
+					            </div>
+					            <div class="prepend-top-0">
+					               updated <time class="js-timeago js-timeago-render" title="" datetime="2018-02-13T18:44:04Z" data-toggle="tooltip" data-placement="top" data-container="body" data-original-title="Feb 13, 2018 6:44pm" data-tid="20">a week ago</time>
+					            </div>
+					         </div>
+					      </li>
+					      <li class="no-description project-row">
+					         <div class="avatar-container s40">
+					            <a class="project" href="/abate/meteor-volunteers">
+					               <div class="avatar project-avatar s40 identicon" style="background-color: #FBE9E7; color: #555">M</div>
+					            </a>
+					         </div>
+					         <div class="project-details">
+					            <h3 class="prepend-top-0 append-bottom-0">
+					               <a class="text-plain" href="/abate/meteor-volunteers"><span class="project-full-name"><span class="namespace-name">
+					               p
+					               /
+					               </span>
+					               <span class="project-name">meteor-volunteers</span></span></a>
+					            </h3>
+					         </div>
+					         <div class="controls">
+					            <div class="prepend-top-0">
+					               <span class="prepend-left-10">
+					               <i aria-hidden="true" data-hidden="true" class="fa fa-star"></i>
+					               1
+					               </span>
+					               <span class="prepend-left-10 visibility-icon has-tooltip" data-container="body" data-placement="left" title="" data-original-title="Public - The project can be accessed without any authentication.">
+					               <i aria-hidden="true" data-hidden="true" class="fa fa-globe fa-fw"></i>
+					               </span>
+					            </div>
+					            <div class="prepend-top-0">
+					               updated <time class="js-timeago js-timeago-render" title="" datetime="2018-02-22T08:20:22Z" data-toggle="tooltip" data-placement="top" data-container="body" data-original-title="Feb 22, 2018 8:20am" data-tid="69">about 23 hours ago</time>
+					            </div>
+					         </div>
+					      </li>
+					      <li class="project-row">
+					         <div class="avatar-container s40">
+					            <a class="project" href="/ciptamedia/ciptamedia-dev.gitlab.io">
+					               <div class="avatar project-avatar s40 identicon" style="background-color: #F3E5F5; color: #555">C</div>
+					            </a>
+					         </div>
+					         <div class="project-details">
+					            <h3 class="prepend-top-0 append-bottom-0">
+					               <a class="text-plain" href="/ciptamedia/ciptamedia-dev.gitlab.io"><span class="project-full-name"><span class="namespace-name">
+					               Cipta Media
+					               /
+					               </span>
+					               <span class="project-name">ciptamedia-dev.gitlab.io</span></span></a>
+					            </h3>
+					            <div class="description prepend-top-5">
+					               <p dir="auto">Dev project for <a href="https://ciptamedia-dev.netlify.com/" rel="nofollow noreferrer noopener" target="_blank">https://ciptamedia-dev.netlify.com/</a> . See <a href="https://app.netlify.com/sites/ciptamedia-dev/" rel="nofollow noreferrer noopener" target="_blank">https://app.netlify.com/sites/ciptamedia-dev/</a></p>
+					               <p dir="auto">After QA, changes pushed to <a href="https://gitlab.com/ciptamedia/ciptamedia.gitlab.io">production repo</a> , published at <a href="https://www.ciptamedia.org/" rel="nofollow noreferrer noopener" target="_blank">https://www.ciptamedia.org/</a></p>
+					            </div>
+					         </div>
+					         <div class="controls">
+					            <div class="prepend-top-0">
+					               <span class="prepend-left-10">
+					                  <a class="ci-status-link ci-status-icon-success " title="Commit: passed" data-toggle="tooltip" data-placement="auto left" data-container="body" href="/ciptamedia/ciptamedia-dev.gitlab.io/commit/05cabe011d377b43705be1cda98c3d95ec355149/pipelines">
+					                     <svg class="s16">
+					                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://gitlab.com/assets/icons-7e80446544970c6b607eda58e7c7f88b0aa23a4cf71caa7f96d163ece8cb8db4.svg#status_success"></use>
+					                     </svg>
+					                  </a>
+					               </span>
+					               <span class="prepend-left-10">
+					               <i aria-hidden="true" data-hidden="true" class="fa fa-star"></i>
+					               0
+					               </span>
+					               <span class="prepend-left-10 visibility-icon has-tooltip" data-container="body" data-placement="left" title="" data-original-title="Public - The project can be accessed without any authentication.">
+					               <i aria-hidden="true" data-hidden="true" class="fa fa-globe fa-fw"></i>
+					               </span>
+					            </div>
+					            <div class="prepend-top-0">
+					               updated <time class="js-timeago js-timeago-render" title="" datetime="2018-02-22T13:48:31Z" data-toggle="tooltip" data-placement="top" data-container="body" data-original-title="Feb 22, 2018 1:48pm" data-tid="22">about 17 hours ago</time>
+					            </div>
+					         </div>
+					      </li>
+					      <li class="project-row">
+					         <div class="avatar-container s40">
+					            <a class="project" href="/InnocentBug/SOMA"><img alt="" class="avatar project-avatar s40 js-lazy-loaded" src="https://assets.gitlab-static.net/uploads/-/system/project/avatar/4230488/logo.png">
+					            </a>
+					         </div>
+					         <div class="project-details">
+					            <h3 class="prepend-top-0 append-bottom-0">
+					               <a class="text-plain" href="/InnocentBug/SOMA"><span class="project-full-name"><span class="namespace-name">
+					               Ludwig Schneider
+					               /
+					               </span>
+					               <span class="project-name">SOMA</span></span></a>
+					            </h3>
+					            <div class="description prepend-top-5">
+					               <p dir="auto">SOMA Offers Monte-Carlo Acceleration 
+					                  is a simulation package for polymeric systems described by soft models.
+					               </p>
+					            </div>
+					         </div>
+					         <div class="controls">
+					            <div class="prepend-top-0">
+					               <span class="prepend-left-10">
+					               <i aria-hidden="true" data-hidden="true" class="fa fa-star"></i>
+					               3
+					               </span>
+					               <span class="prepend-left-10 visibility-icon has-tooltip" data-container="body" data-placement="left" title="" data-original-title="Public - The project can be accessed without any authentication.">
+					               <i aria-hidden="true" data-hidden="true" class="fa fa-globe fa-fw"></i>
+					               </span>
+					            </div>
+					            <div class="prepend-top-0">
+					               updated <time class="js-timeago js-timeago-render" title="" datetime="2018-02-21T13:02:07Z" data-toggle="tooltip" data-placement="top" data-container="body" data-original-title="Feb 21, 2018 1:02pm" data-tid="23">a day ago</time>
+					            </div>
+					         </div>
+					      </li>
+					      <li class="no-description project-row">
+					         <div class="avatar-container s40">
+					            <a class="project" href="/DSASanFrancisco/membership_api">
+					               <div class="avatar project-avatar s40 identicon" style="background-color: #F3E5F5; color: #555">M</div>
+					            </a>
+					         </div>
+					         <div class="project-details">
+					            <h3 class="prepend-top-0 append-bottom-0">
+					               <a class="text-plain" href="/DSASanFrancisco/membership_api"><span class="project-full-name"><span class="namespace-name">
+					               DSA San Francisco
+					               /
+					               </span>
+					               <span class="project-name">membership_api</span></span></a>
+					            </h3>
+					         </div>
+					         <div class="controls">
+					            <div class="prepend-top-0">
+					               <span class="prepend-left-10">
+					                  <a class="ci-status-link ci-status-icon-success " title="Commit: passed" data-toggle="tooltip" data-placement="auto left" data-container="body" href="/DSASanFrancisco/membership_api/commit/2bc10b28ac2b19c057803511550c1fcc40f439c6/pipelines">
+					                     <svg class="s16">
+					                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://gitlab.com/assets/icons-7e80446544970c6b607eda58e7c7f88b0aa23a4cf71caa7f96d163ece8cb8db4.svg#status_success"></use>
+					                     </svg>
+					                  </a>
+					               </span>
+					               <span class="prepend-left-10">
+					               <i aria-hidden="true" data-hidden="true" class="fa fa-star"></i>
+					               6
+					               </span>
+					               <span class="prepend-left-10 visibility-icon has-tooltip" data-container="body" data-placement="left" title="" data-original-title="Public - The project can be accessed without any authentication.">
+					               <i aria-hidden="true" data-hidden="true" class="fa fa-globe fa-fw"></i>
+					               </span>
+					            </div>
+					            <div class="prepend-top-0">
+					               updated <time class="js-timeago js-timeago-render" title="" datetime="2018-02-22T00:20:25Z" data-toggle="tooltip" data-placement="top" data-container="body" data-original-title="Feb 22, 2018 12:20am" data-tid="24">a day ago</time>
+					            </div>
+					         </div>
+					      </li>
+					      <li class="project-row">
+					         <div class="avatar-container s40">
+					            <a class="project" href="/antora/antora"><img alt="" class="avatar project-avatar s40 js-lazy-loaded" src="https://assets.gitlab-static.net/uploads/-/system/project/avatar/4180516/antora.png">
+					            </a>
+					         </div>
+					         <div class="project-details">
+					            <h3 class="prepend-top-0 append-bottom-0">
+					               <a class="text-plain" href="/antora/antora"><span class="project-full-name"><span class="namespace-name">
+					               Antora
+					               /
+					               </span>
+					               <span class="project-name">Antora</span></span></a>
+					            </h3>
+					            <div class="description prepend-top-5">
+					               <p dir="auto">A modular documentation site generator built on Node and designed for users of Asciidoctor. This is the main repository for Antora. It hosts the software components and documentation for the core site generator pipeline.</p>
+					               <p dir="auto"><a href="https://antora.org" rel="nofollow noreferrer noopener" target="_blank">https://antora.org</a></p>
+					            </div>
+					         </div>
+					         <div class="controls">
+					            <div class="prepend-top-0">
+					               <span class="prepend-left-10">
+					                  <a class="ci-status-link ci-status-icon-success " title="Commit: passed" data-toggle="tooltip" data-placement="auto left" data-container="body" href="/antora/antora/commit/80ea26d80d965006646b333f0a604410415cdf76/pipelines">
+					                     <svg class="s16">
+					                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://gitlab.com/assets/icons-7e80446544970c6b607eda58e7c7f88b0aa23a4cf71caa7f96d163ece8cb8db4.svg#status_success"></use>
+					                     </svg>
+					                  </a>
+					               </span>
+					               <span class="prepend-left-10">
+					               <i aria-hidden="true" data-hidden="true" class="fa fa-star"></i>
+					               24
+					               </span>
+					               <span class="prepend-left-10 visibility-icon has-tooltip" data-container="body" data-placement="left" title="Public - The project can be accessed without any authentication.">
+					               <i aria-hidden="true" data-hidden="true" class="fa fa-globe fa-fw"></i>
+					               </span>
+					            </div>
+					            <div class="prepend-top-0">
+					               updated <time class="js-timeago js-timeago-render" title="" datetime="2018-02-21T03:02:02Z" data-toggle="tooltip" data-placement="top" data-container="body" data-original-title="Feb 21, 2018 3:02am" data-tid="25">2 days ago</time>
+					            </div>
+					         </div>
+					      </li>
+					      <li class="project-row">
+					         <div class="avatar-container s40">
+					            <a class="project" href="/fathom/chat">
+					               <div class="avatar project-avatar s40 identicon" style="background-color: #E8EAF6; color: #555">C</div>
+					            </a>
+					         </div>
+					         <div class="project-details">
+					            <h3 class="prepend-top-0 append-bottom-0">
+					               <a class="text-plain" href="/fathom/chat"><span class="project-full-name"><span class="namespace-name">
+					               fathom
+					               /
+					               </span>
+					               <span class="project-name">chat</span></span></a>
+					            </h3>
+					            <div class="description prepend-top-5">
+					               <p dir="auto">Simple blockchain permissioned chatrooms (deprecated in favor of speakeasy)</p>
+					            </div>
+					         </div>
+					         <div class="controls">
+					            <div class="prepend-top-0">
+					               <span class="prepend-left-10">
+					               <i aria-hidden="true" data-hidden="true" class="fa fa-star"></i>
+					               1
+					               </span>
+					               <span class="prepend-left-10 visibility-icon has-tooltip" data-container="body" data-placement="left" title="Public - The project can be accessed without any authentication.">
+					               <i aria-hidden="true" data-hidden="true" class="fa fa-globe fa-fw"></i>
+					               </span>
+					            </div>
+					            <div class="prepend-top-0">
+					               updated <time class="js-timeago js-timeago-render" title="" datetime="2018-02-22T17:43:11Z" data-toggle="tooltip" data-placement="top" data-container="body" data-original-title="Feb 22, 2018 5:43pm" data-tid="26">about 13 hours ago</time>
+					            </div>
+					         </div>
+					      </li>
+					      <li class="no-description project-row">
+					         <div class="avatar-container s40">
+					            <a class="project" href="/tezos/tezos"><img alt="" class="avatar project-avatar s40 js-lazy-loaded" src="https://assets.gitlab-static.net/uploads/-/system/project/avatar/3836952/latin_small_letter_tz.png">
+					            </a>
+					         </div>
+					         <div class="project-details">
+					            <h3 class="prepend-top-0 append-bottom-0">
+					               <a class="text-plain" href="/tezos/tezos"><span class="project-full-name"><span class="namespace-name">
+					               Tezos
+					               /
+					               </span>
+					               <span class="project-name">tezos</span></span></a>
+					            </h3>
+					         </div>
+					         <div class="controls">
+					            <div class="prepend-top-0">
+					               <span class="prepend-left-10">
+					                  <a class="ci-status-link ci-status-icon-success " title="Commit: passed" data-toggle="tooltip" data-placement="auto left" data-container="body" href="/tezos/tezos/commit/c92f370930c5f1bf5224358f70d8cb3af6329cf5/pipelines">
+					                     <svg class="s16">
+					                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://gitlab.com/assets/icons-7e80446544970c6b607eda58e7c7f88b0aa23a4cf71caa7f96d163ece8cb8db4.svg#status_success"></use>
+					                     </svg>
+					                  </a>
+					               </span>
+					               <span class="prepend-left-10">
+					               <i aria-hidden="true" data-hidden="true" class="fa fa-star"></i>
+					               21
+					               </span>
+					               <span class="prepend-left-10 visibility-icon has-tooltip" data-container="body" data-placement="left" title="Public - The project can be accessed without any authentication.">
+					               <i aria-hidden="true" data-hidden="true" class="fa fa-globe fa-fw"></i>
+					               </span>
+					            </div>
+					            <div class="prepend-top-0">
+					               updated <time class="js-timeago js-timeago-render" title="" datetime="2018-02-22T18:39:29Z" data-toggle="tooltip" data-placement="top" data-container="body" data-original-title="Feb 22, 2018 6:39pm" data-tid="27">about 12 hours ago</time>
+					            </div>
+					         </div>
+					      </li>
+					      <li class="project-row">
+					         <div class="avatar-container s40">
+					            <a class="project" href="/imatt/sp/public"><img alt="" class="avatar project-avatar s40 js-lazy-loaded" src="https://assets.gitlab-static.net/uploads/-/system/project/avatar/3831488/icon.png">
+					            </a>
+					         </div>
+					         <div class="project-details">
+					            <h3 class="prepend-top-0 append-bottom-0">
+					               <a class="text-plain" href="/imatt/sp/public"><span class="project-full-name"><span class="namespace-name">
+					               iMatt Solutions / ServicePlanner
+					               /
+					               </span>
+					               <span class="project-name">Issue Tracker</span></span></a>
+					            </h3>
+					            <div class="description prepend-top-5">
+					               <p dir="auto">Official Issue Tracker for the <a href="https://serviceplanner.me" rel="nofollow noreferrer noopener" target="_blank">ServicePlanner</a> app. See the <a href="https://gitlab.com/imatt/sp/public/wikis/home">Wiki</a> for details.</p>
+					            </div>
+					         </div>
+					         <div class="controls">
+					            <div class="prepend-top-0">
+					               <span class="prepend-left-10">
+					               <i aria-hidden="true" data-hidden="true" class="fa fa-star"></i>
+					               9
+					               </span>
+					               <span class="prepend-left-10 visibility-icon has-tooltip" data-container="body" data-placement="left" title="Public - The project can be accessed without any authentication.">
+					               <i aria-hidden="true" data-hidden="true" class="fa fa-globe fa-fw"></i>
+					               </span>
+					            </div>
+					            <div class="prepend-top-0">
+					               updated <time class="js-timeago js-timeago-render" title="" datetime="2017-08-30T13:52:33Z" data-toggle="tooltip" data-placement="top" data-container="body" data-original-title="Aug 30, 2017 1:52pm" data-tid="28">5 months ago</time>
+					            </div>
+					         </div>
+					      </li>
+					      <li class="project-row">
+					         <div class="avatar-container s40">
+					            <a class="project" href="/charts/helm.gitlab.io">
+					               <div class="avatar project-avatar s40 identicon" style="background-color: #FBE9E7; color: #555">H</div>
+					            </a>
+					         </div>
+					         <div class="project-details">
+					            <h3 class="prepend-top-0 append-bottom-0">
+					               <a class="text-plain" href="/charts/helm.gitlab.io"><span class="project-full-name"><span class="namespace-name">
+					               charts
+					               /
+					               </span>
+					               <span class="project-name">helm.gitlab.io</span></span></a>
+					            </h3>
+					            <div class="description prepend-top-5">
+					               <p dir="auto">Cloud Native GitLab Helm Charts</p>
+					            </div>
+					         </div>
+					         <div class="controls">
+					            <div class="prepend-top-0">
+					               <span class="prepend-left-10">
+					                  <a class="ci-status-link ci-status-icon-success " title="Commit: passed" data-toggle="tooltip" data-placement="auto left" data-container="body" href="/charts/helm.gitlab.io/commit/ce2fb3d2e68bfc67c1113443d5dc202c72a9628b/pipelines">
+					                     <svg class="s16">
+					                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://gitlab.com/assets/icons-7e80446544970c6b607eda58e7c7f88b0aa23a4cf71caa7f96d163ece8cb8db4.svg#status_success"></use>
+					                     </svg>
+					                  </a>
+					               </span>
+					               <span class="prepend-left-10">
+					               <i aria-hidden="true" data-hidden="true" class="fa fa-star"></i>
+					               38
+					               </span>
+					               <span class="prepend-left-10 visibility-icon has-tooltip" data-container="body" data-placement="left" title="Public - The project can be accessed without any authentication.">
+					               <i aria-hidden="true" data-hidden="true" class="fa fa-globe fa-fw"></i>
+					               </span>
+					            </div>
+					            <div class="prepend-top-0">
+					               updated <time class="js-timeago js-timeago-render" title="" datetime="2018-02-23T00:17:02Z" data-toggle="tooltip" data-placement="top" data-container="body" data-original-title="Feb 23, 2018 12:17am" data-tid="29">about 7 hours ago</time>
+					            </div>
+					         </div>
+					      </li>
+					      <li class="project-row">
+					         <div class="avatar-container s40">
+					            <a class="project" href="/gitlab-org/takeoff"><img alt="" class="avatar project-avatar s40 js-lazy-loaded" src="https://assets.gitlab-static.net/uploads/-/system/project/avatar/3674569/takeoff-avatar.png">
+					            </a>
+					         </div>
+					         <div class="project-details">
+					            <h3 class="prepend-top-0 append-bottom-0">
+					               <a class="text-plain" href="/gitlab-org/takeoff"><span class="project-full-name"><span class="namespace-name">
+					               GitLab.org
+					               /
+					               </span>
+					               <span class="project-name">takeoff</span></span></a>
+					            </h3>
+					            <div class="description prepend-top-5">
+					               <p dir="auto">Instructions and tools for deploying GitLab.com</p>
+					            </div>
+					         </div>
+					         <div class="controls">
+					            <div class="prepend-top-0">
+					               <span class="prepend-left-10">
+					                  <a class="ci-status-link ci-status-icon-success " title="Commit: passed" data-toggle="tooltip" data-placement="auto left" data-container="body" href="/gitlab-org/takeoff/commit/d827197a70bbc7a64110581142fbb6c01819a121/pipelines">
+					                     <svg class="s16">
+					                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://gitlab.com/assets/icons-7e80446544970c6b607eda58e7c7f88b0aa23a4cf71caa7f96d163ece8cb8db4.svg#status_success"></use>
+					                     </svg>
+					                  </a>
+					               </span>
+					               <span class="prepend-left-10">
+					               <i aria-hidden="true" data-hidden="true" class="fa fa-star"></i>
+					               11
+					               </span>
+					               <span class="prepend-left-10 visibility-icon has-tooltip" data-container="body" data-placement="left" title="" data-original-title="Public - The project can be accessed without any authentication.">
+					               <i aria-hidden="true" data-hidden="true" class="fa fa-globe fa-fw"></i>
+					               </span>
+					            </div>
+					            <div class="prepend-top-0">
+					               updated <time class="js-timeago js-timeago-render" title="" datetime="2018-02-12T15:24:44Z" data-toggle="tooltip" data-placement="top" data-container="body" data-original-title="Feb 12, 2018 3:24pm" data-tid="30">a week ago</time>
+					            </div>
+					         </div>
+					      </li>
+					      <li class="no-description project-row">
+					         <div class="avatar-container s40">
+					            <a class="project" href="/bpcarm/trainings2017">
+					               <div class="avatar project-avatar s40 identicon" style="background-color: #E0F2F1; color: #555">T</div>
+					            </a>
+					         </div>
+					         <div class="project-details">
+					            <h3 class="prepend-top-0 append-bottom-0">
+					               <a class="text-plain" href="/bpcarm/trainings2017"><span class="project-full-name"><span class="namespace-name">
+					               Believer Programmers' Club
+					               /
+					               </span>
+					               <span class="project-name">trainings2017</span></span></a>
+					            </h3>
+					         </div>
+					         <div class="controls">
+					            <div class="prepend-top-0">
+					               <span class="prepend-left-10">
+					                  <a class="ci-status-link ci-status-icon-failed " title="Commit: failed" data-toggle="tooltip" data-placement="auto left" data-container="body" href="/bpcarm/trainings2017/commit/ec1c101b969de2fac051d1bb04ae3d8fbb146d6a/pipelines">
+					                     <svg class="s16">
+					                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://gitlab.com/assets/icons-7e80446544970c6b607eda58e7c7f88b0aa23a4cf71caa7f96d163ece8cb8db4.svg#status_failed"></use>
+					                     </svg>
+					                  </a>
+					               </span>
+					               <span class="prepend-left-10">
+					               <i aria-hidden="true" data-hidden="true" class="fa fa-star"></i>
+					               2
+					               </span>
+					               <span class="prepend-left-10 visibility-icon has-tooltip" data-container="body" data-placement="left" title="Public - The project can be accessed without any authentication.">
+					               <i aria-hidden="true" data-hidden="true" class="fa fa-globe fa-fw"></i>
+					               </span>
+					            </div>
+					            <div class="prepend-top-0">
+					               updated <time class="js-timeago js-timeago-render" title="" datetime="2018-02-22T10:42:59Z" data-toggle="tooltip" data-placement="top" data-container="body" data-original-title="Feb 22, 2018 10:42am" data-tid="31">about 20 hours ago</time>
+					            </div>
+					         </div>
+					      </li>
+					      <li class="project-row">
+					         <div class="avatar-container s40">
+					            <a class="project" href="/ercom/citbx4gitlab">
+					               <div class="avatar project-avatar s40 identicon" style="background-color: #E8EAF6; color: #555">C</div>
+					            </a>
+					         </div>
+					         <div class="project-details">
+					            <h3 class="prepend-top-0 append-bottom-0">
+					               <a class="text-plain" href="/ercom/citbx4gitlab"><span class="project-full-name"><span class="namespace-name">
+					               ercom
+					               /
+					               </span>
+					               <span class="project-name">citbx4gitlab</span></span></a>
+					            </h3>
+					            <div class="description prepend-top-5">
+					               <p dir="auto">CI toolbox for Gitlab</p>
+					            </div>
+					         </div>
+					         <div class="controls">
+					            <div class="prepend-top-0">
+					               <span class="prepend-left-10">
+					                  <a class="ci-status-link ci-status-icon-success " title="Commit: passed" data-toggle="tooltip" data-placement="auto left" data-container="body" href="/ercom/citbx4gitlab/commit/e8e010d7058a74d33ce66be19f273be600f67c25/pipelines">
+					                     <svg class="s16">
+					                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://gitlab.com/assets/icons-7e80446544970c6b607eda58e7c7f88b0aa23a4cf71caa7f96d163ece8cb8db4.svg#status_success"></use>
+					                     </svg>
+					                  </a>
+					               </span>
+					               <span class="prepend-left-10">
+					               <i aria-hidden="true" data-hidden="true" class="fa fa-star"></i>
+					               9
+					               </span>
+					               <span class="prepend-left-10 visibility-icon has-tooltip" data-container="body" data-placement="left" title="Public - The project can be accessed without any authentication.">
+					               <i aria-hidden="true" data-hidden="true" class="fa fa-globe fa-fw"></i>
+					               </span>
+					            </div>
+					            <div class="prepend-top-0">
+					               updated <time class="js-timeago js-timeago-render" title="" datetime="2018-02-20T10:39:41Z" data-toggle="tooltip" data-placement="top" data-container="body" data-original-title="Feb 20, 2018 10:39am" data-tid="32">2 days ago</time>
+					            </div>
+					         </div>
+					      </li>
+					      <li class="project-row">
+					         <div class="avatar-container s40">
+					            <a class="project" href="/inkscape/inkscape"><img alt="" class="avatar project-avatar s40 js-lazy-loaded" src="https://assets.gitlab-static.net/uploads/-/system/project/avatar/3472737/inkscape.png">
+					            </a>
+					         </div>
+					         <div class="project-details">
+					            <h3 class="prepend-top-0 append-bottom-0">
+					               <a class="text-plain" href="/inkscape/inkscape"><span class="project-full-name"><span class="namespace-name">
+					               Inkscape
+					               /
+					               </span>
+					               <span class="project-name">inkscape</span></span></a>
+					            </h3>
+					            <div class="description prepend-top-5">
+					               <p dir="auto">Inkscape vector illustrator</p>
+					            </div>
+					         </div>
+					         <div class="controls">
+					            <div class="prepend-top-0">
+					               <span class="prepend-left-10">
+					                  <a class="ci-status-link ci-status-icon-success " title="Commit: passed" data-toggle="tooltip" data-placement="auto left" data-container="body" href="/inkscape/inkscape/commit/193c56f3498bc1b8c2c939bc36666e2666827b51/pipelines">
+					                     <svg class="s16">
+					                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://gitlab.com/assets/icons-7e80446544970c6b607eda58e7c7f88b0aa23a4cf71caa7f96d163ece8cb8db4.svg#status_success"></use>
+					                     </svg>
+					                  </a>
+					               </span>
+					               <span class="prepend-left-10">
+					               <i aria-hidden="true" data-hidden="true" class="fa fa-star"></i>
+					               389
+					               </span>
+					               <span class="prepend-left-10 visibility-icon has-tooltip" data-container="body" data-placement="left" title="" data-original-title="Public - The project can be accessed without any authentication.">
+					               <i aria-hidden="true" data-hidden="true" class="fa fa-globe fa-fw"></i>
+					               </span>
+					            </div>
+					            <div class="prepend-top-0">
+					               updated <time class="js-timeago js-timeago-render" title="" datetime="2018-02-22T10:58:33Z" data-toggle="tooltip" data-placement="top" data-container="body" data-original-title="Feb 22, 2018 10:58am" data-tid="33">about 20 hours ago</time>
+					            </div>
+					         </div>
+					      </li>
+					      <li class="no-description project-row">
+					         <div class="avatar-container s40">
+					            <a class="project" href="/dekkoproject/dekko"><img alt="" class="avatar project-avatar s40 js-lazy-loaded" src="https://assets.gitlab-static.net/uploads/-/system/project/avatar/3437838/dekko-app.png">
+					            </a>
+					         </div>
+					         <div class="project-details">
+					            <h3 class="prepend-top-0 append-bottom-0">
+					               <a class="text-plain" href="/dekkoproject/dekko"><span class="project-full-name"><span class="namespace-name">
+					               Dekko Project
+					               /
+					               </span>
+					               <span class="project-name">Dekko</span></span></a>
+					            </h3>
+					         </div>
+					         <div class="controls">
+					            <div class="prepend-top-0">
+					               <span class="prepend-left-10">
+					                  <a class="ci-status-link ci-status-icon-success " title="Commit: passed" data-toggle="tooltip" data-placement="auto left" data-container="body" href="/dekkoproject/dekko/commit/81a4fbefa2e734de7f9a32ab63617ef39977694d/pipelines">
+					                     <svg class="s16">
+					                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://gitlab.com/assets/icons-7e80446544970c6b607eda58e7c7f88b0aa23a4cf71caa7f96d163ece8cb8db4.svg#status_success"></use>
+					                     </svg>
+					                  </a>
+					               </span>
+					               <span class="prepend-left-10">
+					               <i aria-hidden="true" data-hidden="true" class="fa fa-star"></i>
+					               7
+					               </span>
+					               <span class="prepend-left-10 visibility-icon has-tooltip" data-container="body" data-placement="left" title="" data-original-title="Public - The project can be accessed without any authentication.">
+					               <i aria-hidden="true" data-hidden="true" class="fa fa-globe fa-fw"></i>
+					               </span>
+					            </div>
+					            <div class="prepend-top-0">
+					               updated <time class="js-timeago js-timeago-render" title="" datetime="2018-01-13T13:17:09Z" data-toggle="tooltip" data-placement="top" data-container="body" data-original-title="Jan 13, 2018 1:17pm" data-tid="34">a month ago</time>
+					            </div>
+					         </div>
+					      </li>
+					      <li class="project-row">
+					         <div class="avatar-container s40">
+					            <a class="project" href="/fathom/fathom.gitlab.io">
+					               <div class="avatar project-avatar s40 identicon" style="background-color: #EEEEEE; color: #555">F</div>
+					            </a>
+					         </div>
+					         <div class="project-details">
+					            <h3 class="prepend-top-0 append-bottom-0">
+					               <a class="text-plain" href="/fathom/fathom.gitlab.io"><span class="project-full-name"><span class="namespace-name">
+					               fathom
+					               /
+					               </span>
+					               <span class="project-name">fathom.gitlab.io</span></span></a>
+					            </h3>
+					            <div class="description prepend-top-5">
+					               <p dir="auto">The website served to fathom.network </p>
+					            </div>
+					         </div>
+					         <div class="controls">
+					            <div class="prepend-top-0">
+					               <span class="prepend-left-10">
+					                  <a class="ci-status-link ci-status-icon-success " title="Commit: passed" data-toggle="tooltip" data-placement="auto left" data-container="body" href="/fathom/fathom.gitlab.io/commit/a97a43523adaa41d3330e3b828e06b663f92589a/pipelines">
+					                     <svg class="s16">
+					                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://gitlab.com/assets/icons-7e80446544970c6b607eda58e7c7f88b0aa23a4cf71caa7f96d163ece8cb8db4.svg#status_success"></use>
+					                     </svg>
+					                  </a>
+					               </span>
+					               <span class="prepend-left-10">
+					               <i aria-hidden="true" data-hidden="true" class="fa fa-star"></i>
+					               1
+					               </span>
+					               <span class="prepend-left-10 visibility-icon has-tooltip" data-container="body" data-placement="left" title="" data-original-title="Public - The project can be accessed without any authentication.">
+					               <i aria-hidden="true" data-hidden="true" class="fa fa-globe fa-fw"></i>
+					               </span>
+					            </div>
+					            <div class="prepend-top-0">
+					               updated <time class="js-timeago js-timeago-render" title="" datetime="2018-02-22T10:55:31Z" data-toggle="tooltip" data-placement="top" data-container="body" data-original-title="Feb 22, 2018 10:55am" data-tid="35">about 20 hours ago</time>
+					            </div>
+					         </div>
+					      </li>
+					   </ul>
+					   <div class="gl-pagination">
+					      <ul class="pagination clearfix">
+					         <li class="prev">
+					            <a rel="prev" href="/explore/projects/trending?non_archived=true&amp;trending=true">Prev</a>
+					         </li>
+					         <li class="next">
+					            <a rel="next" href="/explore/projects/trending?non_archived=true&amp;page=3&amp;trending=true">Next</a>
+					         </li>
+					      </ul>
+					   </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
